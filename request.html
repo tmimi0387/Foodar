@@ -3,6 +3,7 @@
 <head>
     <title>Request</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="getTotal.js"></script>
 </head>
 <body>
     <header>
@@ -26,18 +27,18 @@
                     </div>
                     <div>
                         <h4>Choose Your Style:</h4>
-                        <div class="optionsBox">
+                        <div class="optionsBox" onclick="totalPrice()">
                             <div class="options">
                                 <label for="classic"><h5>Classic</h5> This is a classic treatment</label><br>
-                                <input type="radio" id="classic" name="style" value="3">
+                                <input type="radio" id="classic" name="style" value="3.00"  >
                             </div>
                             <div class="options">
                                 <label for="premium"><h5>Premium</h5> Pinky's up</label><br>
-                                <input type="radio" id="premium" name="style" value="5">
+                                <input type="radio" id="premium" name="style" value="5.00">
                             </div>
                             <div class="options">
                                 <label for="royal"><h5>Royal</h5> Your food is served on a silver platter... Literally</label>
-                                <input type="radio" id="royal" name="style" value="7">
+                                <input type="radio" id="royal" name="style" value="7.00">
                         </div>
                     </div>
                 </div>
@@ -49,24 +50,23 @@
                         <input type="text" name="restaurant" placeholder="Name">
                     </div>
                     <h4>Select Tip Amount:</h4>
-                    <div class="optionsBox">
+                    <div class="optionsBox" onclick="totalPrice()">
                         <div class="options">
                             <label for="10"><h5>10%</h5> They did their job</label><br>
-                            <input type="radio" id="_10" name="tip" value="10">
+                            <input type="radio" id="_10" name="tip" value=".1" onclick="totalPrice()">
                         </div>
                         <div class="options">    
                             <label for="15"><h5>15%</h5> They made you feel special</label><br>
-                            <input type="radio" id="_15" name="tip" value="15">
+                            <input type="radio" id="_15" name="tip" value=".15">
                         </div>
                         <div class="options">    
                             <label for="royal"><h5>20%</h5> I wanna give them more, but this is all I have!</label>
-                            <input type="radio" id="_20" name="tip" value="20">
+                            <input type="radio" id="_20" name="tip" value=".2">
                         </div>
                     </div>
                 </div>
                 <div>
-                    <h4>Total: $<span id="total"></span></h4>
-                    <script>total()</script>
+                    <h4 id="price">Total: <span id="total"></span> </h4>
                 </div>
                 <div id="request">
                     <button>Request</button>
